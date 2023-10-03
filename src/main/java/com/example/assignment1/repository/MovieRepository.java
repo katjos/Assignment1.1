@@ -1,6 +1,7 @@
 package com.example.assignment1.repository;
 
 import com.example.assignment1.entity.Movie;
+import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
 import java.util.Collection;
@@ -8,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.*;
 
+@Repository
 public class MovieRepository {
     private final Map<String, Movie> movieMap = new HashMap<>();
 
@@ -22,7 +24,6 @@ public class MovieRepository {
 
 
     private void initData() {
-        // Sample Movie 1
         // Sample Movie 1
         Movie movie1 = new Movie();
         movie1.setImdbId("tt123456");
@@ -107,8 +108,6 @@ public class MovieRepository {
     public void deleteMovie(String imdbId) {
         movieMap.remove(imdbId);
     }
-
-
 
 
     // Additional methods for update and delete if needed.

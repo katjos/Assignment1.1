@@ -12,16 +12,15 @@ import java.util.List;
 @Service
 public class MovieService {
 
-    private final List<Movie> movies = new ArrayList<>();
-    public List<Movie> getAllMovies;
+    @Autowired
+    private MovieRepository movieRepository;
 
     public List<Movie> getAllMovies() {
-        return movies;
+        return movieRepository.getAllMovies();
     }
 
     public Movie addMovie(Movie movie) {
         movie.setLastModified(LocalDateTime.now());
-        movies.add(movie);
-        return movie;
+        return movieRepository.addMovie(movie);
     }
 }
