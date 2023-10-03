@@ -2,6 +2,7 @@ package com.example.assignment1.entity;
 
 import java.time.LocalDateTime;
 
+
 public class Movie {
     private String imdbId; // Key
     private String title;  // Required
