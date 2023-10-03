@@ -1,4 +1,4 @@
-package entity;
+package com.example.assignment1.entity;
 
 import java.time.LocalDateTime;
 
@@ -79,5 +79,17 @@ public class Movie {
 
     public void setLastModified(LocalDateTime lastModified) {
         this.lastModified = lastModified;
+    }
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "imdbId='" + imdbId + '\'' +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", rating='" + rating + '\'' +
+                ", genre='" + genre + '\'' +
+                ", year='" + year + '\'' +
+                ", lastModified='" + lastModified + '}';
     }
 }
